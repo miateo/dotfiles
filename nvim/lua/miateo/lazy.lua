@@ -11,7 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
-	{ import = "miateo.plugins" }, --[[ { import = "miateo.plugins.lsp"} ]]
+	{ import = "miateo.plugins" }, --, { import = "miateo.plugins.lsp"}
 }, {
 	checker = {
 		enabled = true,

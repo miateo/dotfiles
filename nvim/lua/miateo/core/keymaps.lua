@@ -4,11 +4,11 @@ local keymap = vim.keymap -- for concisensess
 
 keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
-keymap.set("n", "<leader>nh", ":nohl<CR>", {desc = "Clear search highlights" })
+keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
 -- incrementing/decrementing numbers
-keymap.set("n", "<leader>+", "<C-a>", {desc = "Increment number"}) -- increment
-keymap.set("n", "<leader>-", "<C-x>", {desc = "Decrement numebr"}) -- decrement
+keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
+keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement numebr" }) -- decrement
 
 keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
@@ -24,3 +24,6 @@ keymap.set("n", "<leader>tx", "<cmd>tabclose<CR>", { desc = "Close current tab" 
 keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab" }) --  go to next tab
 keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab" }) --  go to previous tab
 keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab" }) --  move current buffer to new tab
+
+--keymap to format
+keymap.set("n", "<leader>fd", "<cmd>lua vim.lsp.buf.format = prittier <CR>", { desc = "Format code" })
