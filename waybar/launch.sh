@@ -1,6 +1,3 @@
-# Start waybar by Ace (2024)
-# Kill all previous instaces
-killall waybar
-
-# start personal confiuration
-waybar -c /home/ace/.config/waybar/config.jsonc & -s /home/ace/.config/waybar/style.css
+#!/usr/bin/env bash
+killall waybar 2>/dev/null
+waybar -c "$HOME/.config/waybar/config.jsonc" -s "$HOME/.config/waybar/style.css" &

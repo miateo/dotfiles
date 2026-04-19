@@ -10,7 +10,8 @@ opt.tabstop = 2 -- 2 spaces for tabs (prittier default)
 opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
-
+vim.opt.foldmethod = "expr"
+vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 opt.wrap = false
 
 -- search settings

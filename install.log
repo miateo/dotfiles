@@ -1,0 +1,10 @@
+[23:52:08 2026-04-19] FETCHING Version 2.43.1
+[23:52:08 2026-04-19] CREATING /home/mello/.spicetify
+[23:52:08 2026-04-19] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.43.1/spicetify-2.43.1-linux-amd64.tar.gz
+[23:52:10 2026-04-19] EXTRACTING /home/mello/.spicetify/spicetify.tar.gz
+[23:52:10 2026-04-19] SETTING EXECUTABLE PERMISSIONS TO /home/mello/.spicetify/spicetify
+[23:52:10 2026-04-19] REMOVING /home/mello/.spicetify/spicetify.tar.gz
+[23:52:10 2026-04-19] CREATING /home/mello/.zshrc
+[23:52:10 2026-04-19] APPENDING /home/mello/.spicetify to PATH in /home/mello/.zshrc
+[23:52:10 2026-04-19] spicetify v2.43.1 was installed successfully to /home/mello/.spicetify
+[23:52:10 2026-04-19] Run 'spicetify --help' to get started
