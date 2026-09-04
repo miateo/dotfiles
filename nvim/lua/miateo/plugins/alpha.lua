@@ -6,7 +6,7 @@ return {
 		local dashboard = require("alpha.themes.dashboard")
 
 		-- Open and read the content of the text file
-		local file = io.open("/Users/miateo/.config/nvim/lua/dash_arts/archangel.txt", "r")
+		local file = io.open(vim.fn.stdpath("config") .. "/lua/dash_arts/archangel.txt", "r")
 		local content = file:read("*a")
 		file:close()
 

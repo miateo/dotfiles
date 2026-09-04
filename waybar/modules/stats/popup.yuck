@@ -1,0 +1,46 @@
+(defpoll temp   :interval "5s"  :initial "0" "awk '{print int($1/1000)}' /sys/class/thermal/thermal_zone0/temp 2>/dev/null")
+(defpoll disk   :interval "30s" :initial "0" "df / | awk 'NR==2{gsub(\"%\",\"\");print $5}'")
+(defpoll uptime :interval "60s" :initial "-" "uptime -p | sed 's/up //'")
+(defpoll kernel :interval "3600s" :initial "-" "uname -r")
+(defvar show-stats false)
+(defwidget stat-row [icon name value]
+  (box :class "row" :orientation "h" :space-evenly false :spacing 10
+    (label :class "icon" :text icon)
+    (label :class "name" :text name :hexpand true :xalign 0)
+    (label :class "value" :text value)))
+
+(defwidget stat-row-bar [icon name value]
+  (box :class "row" :orientation "v" :space-evenly false :spacing 4
+    (box :orientation "h" :space-evenly false :spacing 10
+      (label :class "icon" :text icon)
+      (label :class "name" :text name :hexpand true :xalign 0)
+      (label :class "value" :text "${value}%"))
+    (scale :class "bar" :value value :min 0 :max 100 :active false)))
+
+(defwidget stat-graph [name value klass]
+  (box :class "graph" :orientation "v" :space-evenly false :spacing 4
+    (label :class "name" :text name :xalign 0)
+    (graph :value value :time-range "2m" :thickness 2 :line-style "round" :dynamic true :class klass)))
+
+(defwidget stats-panel []
+  (box :class "panel" :orientation "v" :space-evenly false :spacing 8
+    (label :class "title" :text "System Stats")
+    (stat-row-bar :icon "" :name "CPU"  :value {EWW_CPU.avg})
+    (stat-row-bar :icon "" :name "RAM"  :value {EWW_RAM.used_mem_perc})
+    (stat-row     :icon "" :name "Temp" :value "${temp}°C")
+    (stat-row     :icon "" :name "Disk" :value "${disk}%")
+    (box :class "divider")
+    (stat-graph :name "CPU history" :value {EWW_CPU.avg} :klass "graph cpu")
+    (stat-graph :name "RAM history" :value {EWW_RAM.used_mem_perc} :klass "graph mem")
+    (box :class "divider")
+    (stat-row :icon "" :name "Uptime" :value uptime)
+    (stat-row :icon "" :name "Kernel" :value kernel)))
+
+(defwindow stats
+  :monitor 0
+  :geometry (geometry :x "8px" :y "36px" :width "280px" :anchor "top right")
+  :stacking "overlay"
+  :wm-ignore true
+  (box: show-stats
+    (stats-panel)
+  ))

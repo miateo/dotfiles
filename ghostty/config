@@ -1,0 +1,82 @@
+# Ghostty — portable workstation terminal
+# Matte black / aerospace-console style: minimal, high contrast, no neon.
+
+# Font
+font-family = JetBrainsMono Nerd Font
+font-family-bold = JetBrainsMono Nerd Font
+font-family-italic = JetBrainsMono Nerd Font
+font-family-bold-italic = JetBrainsMono Nerd Font
+font-size = 11
+font-shaping-break = cursor
+
+# Surface
+background = #05070a
+foreground = #e8edf2
+background-opacity = 0.96
+background-blur = false
+window-padding-x = 10
+window-padding-y = 8
+window-padding-balance = true
+window-decoration = false
+window-theme = dark
+window-vsync = true
+mouse-hide-while-typing = true
+
+# Cursor / selection
+cursor-style = block
+cursor-style-blink = false
+cursor-color = #e8edf2
+cursor-text = #05070a
+selection-foreground = #05070a
+selection-background = #e8edf2
+
+# Clipboard / UX
+copy-on-select = true
+clipboard-read = allow
+clipboard-write = allow
+clipboard-trim-trailing-spaces = true
+clipboard-paste-protection = true
+confirm-close-surface = false
+scrollback-limit = 10000000
+link-url = true
+link-previews = true
+resize-overlay = never
+
+# Keybinds worth remembering
+keybind = ctrl+shift+,=reload_config
+keybind = ctrl+,=open_config
+keybind = ctrl+shift+c=copy_to_clipboard:mixed
+keybind = ctrl+shift+v=paste_from_clipboard
+keybind = ctrl+shift+t=new_tab
+keybind = ctrl+shift+w=close_tab:this
+keybind = ctrl+tab=next_tab
+keybind = ctrl+shift+tab=previous_tab
+keybind = ctrl+shift+f=start_search
+keybind = ctrl+shift+p=toggle_command_palette
+keybind = ctrl+enter=toggle_fullscreen
+keybind = ctrl+shift+enter=toggle_split_zoom
+keybind = ctrl+shift+o=new_split:right
+keybind = ctrl+shift+e=new_split:down
+keybind = ctrl+alt+arrow_left=goto_split:left
+keybind = ctrl+alt+arrow_right=goto_split:right
+keybind = ctrl+alt+arrow_up=goto_split:up
+keybind = ctrl+alt+arrow_down=goto_split:down
+
+# 16-color palette
+# Neutral colors stay graphite/smoke. Blue is informational; amber is warning.
+palette = 0=#05070a
+palette = 1=#f59e0b
+palette = 2=#d6dde5
+palette = 3=#fbbf24
+palette = 4=#7dd3fc
+palette = 5=#94a3b8
+palette = 6=#a7f3d0
+palette = 7=#e8edf2
+palette = 8=#5b6572
+palette = 9=#fbbf24
+palette = 10=#ffffff
+palette = 11=#ffd166
+palette = 12=#38bdf8
+palette = 13=#cbd5e1
+palette = 14=#d1fae5
+palette = 15=#ffffff

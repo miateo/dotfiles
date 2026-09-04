@@ -7,7 +7,7 @@
         // "type": "file", // --> display ascii art
         "type": "kitty", // display image
         // "source": "/home/ace/.config/nvim/lua/dash_arts/archangel.txt",
-        "source" : "/home/ace/.config/fastfetch/wallpapers/fastfetch-w-1.png",
+        "source" : "/home/mello/.config/fastfetch/wallpapers/fastfetch-w-1.png",
         "width": 45,
         "height": 18,
         "padding": {

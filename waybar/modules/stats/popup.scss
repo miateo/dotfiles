@@ -1,0 +1,68 @@
+.panel {
+  background: rgba(24, 24, 28, 0.94);
+  border-radius: 10px;
+  padding: 14px;
+  color: #d0d0d0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+
+  .title {
+    font-weight: bold;
+    font-size: 13px;
+    color: #ffffff;
+    margin-bottom: 4px;
+  }
+
+  .row {
+    padding: 2px 0;
+  }
+
+  .icon {
+    color: #88c0d0;
+    min-width: 16px;
+  }
+
+  .name {
+    color: #b0b0b0;
+  }
+
+  .value {
+    color: #ffffff;
+    font-weight: bold;
+  }
+
+  .divider {
+    background: rgba(255, 255, 255, 0.08);
+    min-height: 1px;
+    margin: 4px 0;
+  }
+
+  .graph {
+    padding: 2px 0;
+    background-color: gray;
+  }
+
+
+  .bar trough {
+    background: rgba(255, 255, 255, 0.08);
+    min-height: 4px;
+    border-radius: 2px;
+  }
+
+  .bar highlight {
+    background: #88c0d0;
+    border-radius: 2px;
+  }
+}
+
+.graph {
+  min-height: 50px;
+  padding: 4px 0;
+}
+
+.graph.cpu {
+  color: #88c0d0;
+}
+
+.graph.mem {
+  color: #a3be8c;
+}

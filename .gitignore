@@ -1,0 +1,17 @@
+# macOS/resource fork noise
+.DS_Store
+._*
+
+# Local/editor backups
+*.bak
+*.pi-bak
+*~
+
+# Runtime/volatile app state
+spotify/Users/*/ad-state-storage.bnk
+spotify/Users/*/prefs
+spotify/prefs
+
+# Logs/cache
+*.log
+.cache/

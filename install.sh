@@ -269,7 +269,7 @@ section "Symlinking dotfiles"
 
 mkdir -p "$HOME/.config"
 
-APPS=(fastfetch hypr kitty lazygit nvim spicetify spotify waybar zathura)
+APPS=(fastfetch ghostty hypr kitty lazygit nvim spicetify spotify waybar zathura)
 
 for app in "${APPS[@]}"; do
     source="$DOTFILES/$app"

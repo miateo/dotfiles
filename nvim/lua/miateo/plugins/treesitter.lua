@@ -1,5 +1,6 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	tag = "v0.9.3",
 	event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate",
 	dependencies = {
@@ -25,8 +26,6 @@ return {
 				"json",
 				"java",
 				"cpp",
-				"java",
-				"swift",
 				"php",
 				"javascript",
 				"typescript",
